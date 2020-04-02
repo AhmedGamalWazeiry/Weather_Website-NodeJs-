@@ -7,6 +7,7 @@ const app = express()
 const PublicDirectroyPath = path.join(__dirname, '../public')
 const ViewsPath = path.join(__dirname, '../templates/views')
 const PartialsPath = path.join(__dirname, '../templates/partials')
+const port = process.env.PORT || 3000
 
 app.set('view engine','hbs')
 app.set('views',ViewsPath)
@@ -60,6 +61,6 @@ app.get('/weather',(req,res)=>{
 app.get('*',(req,res)=>{
     res.render('Error',{title:'404',errormasg:'Not foud page',Name:'AhmedGamal'})
 })
-app.listen(3000,()=>{
-    console.log('server on port 3000')
+app.listen(port,()=>{
+    console.log('server on port ' + port)
 })
