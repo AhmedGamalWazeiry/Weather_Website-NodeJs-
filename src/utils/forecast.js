@@ -10,7 +10,7 @@ const forecast = (latitude , longitude ,callback)=>{
         }else if(body.error){
             callback('Unable to forecast',undefined)
         }else{
-            callback(undefined,body.daily.data[0].summary +" it is currently degree out " + body.currently.temperature + " Degrees Out. Theres is a " +parseFloat(body.currently.precipProbability) +" chance of rain .")
+            callback(undefined,body.daily.data[0].summary +" it is currently degree out "+ body.currently.temperature + " Degrees Out. Theres is a " +parseFloat(body.currently.precipProbability) +" chance of rain ."+"The Maximum Temperature : "+ body.daily.data[0].temperatureMax +"The Minimum Temperature : "+body.daily.data[0].temperatureMin)
         }
     })
 
