@@ -14,13 +14,13 @@ app.set('views',ViewsPath)
 app.use(express.static(PublicDirectroyPath))
 hbs.registerPartials(PartialsPath)
 app.get('',(req,res)=>{
-    res.render('index',{title:'Index',Name:'Jimmy'})
+    res.render('index',{title:'Weather',Name:'AhmedGamal'})
 })
 app.get('/about',(req,res)=>{
     res.render('about',{title:'About Me',Name:'AhmedGamal'})
 })
 app.get('/help',(req,res)=>{
-    res.render('help',{title:'Help',Name:'AhmedGEmmy'})
+    res.render('help',{title:'Help',Name:'AhmedGamal'})
 })
 app.get('/help/*',(req,res)=>{
     res.render('Error',{title:'404',errormasg:'Not foud help page',Name:'AhmedGamal'})
